@@ -1,0 +1,120 @@
+.details-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff; /* Fond clair */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.info-section {
+    flex: 1;
+}
+
+.info-section h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.info-section strong {
+    color: #222;
+}
+
+/* Boutons */
+.info-section button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* 🎨 Couleurs des boutons */
+.info-section button:first-of-type { background-color: #031937; color: white; } /* Retour */
+.info-section button:nth-of-type(2) { background-color: #031937; color: white; } /* Suivant */
+.info-section button:nth-of-type(3) { background-color: #031937; color: white; } /* Ajouter Résidence */
+.info-section button:nth-of-type(4) { background-color: #031937; color: white; } /* Mettre à jour */
+
+.info-section button:hover {
+    opacity: 0.8;
+}
+
+/* Lien vers la liste des appartements */
+.info-section a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.info-section a:hover {
+    background: #004aad;
+    color: white;
+}
+
+/* Status Colors */
+.status-active { color: #28a745; font-weight: bold; }  /* Actif - Vert */
+.status-inactive { color: #dc3545; font-weight: bold; } /* Inactif - Rouge */
+.status-pending { color: #ffc107; font-weight: bold; }  /* En attente - Jaune */
+
+/* 📌 Résidence non trouvée */
+.not-found {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.not-found h2 {
+    font-size: 22px;
+    color: #dc3545;
+}
+
+.not-found button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.not-found button:hover {
+    opacity: 0.8;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 200px;
+    }
+}

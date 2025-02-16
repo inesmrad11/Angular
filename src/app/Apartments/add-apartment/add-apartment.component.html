@@ -1,0 +1,26 @@
+<!-- create-apartment.component.html -->
+<h2>Create New Apartment</h2>
+<form (ngSubmit)="createApartment()">
+  <label for="apartNum">Apartment Number:</label>
+  <input type="number" id="apartNum" [(ngModel)]="apartment.apartNum" name="apartNum" required />
+
+  <label for="floorNum">Floor Number:</label>
+  <input type="number" id="floorNum" [(ngModel)]="apartment.floorNum" name="floorNum" required />
+
+  <label for="surface">Surface:</label>
+  <input type="number" id="surface" [(ngModel)]="apartment.surface" name="surface" required />
+
+  <label for="terrace">Has Terrace:</label>
+  <input type="checkbox" id="terrace" [(ngModel)]="apartment.terrace" name="terrace" />
+
+  <label for="surfaceterrace">Terrace Surface:</label>
+  <input type="number" id="surfaceterrace" [(ngModel)]="apartment.surfaceterrace" name="surfaceterrace" />
+
+  <label for="category">Category:</label>
+  <input type="text" id="category" [(ngModel)]="apartment.category" name="category" required />
+
+  <label for="residenceId">Residence ID:</label>
+  <input type="number" id="residenceId" [(ngModel)]="apartment.residenceld" name="residenceld" required />
+
+  <button type="submit">Create Apartment</button>
+</form>

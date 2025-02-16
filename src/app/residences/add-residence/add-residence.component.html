@@ -1,0 +1,71 @@
+<div class="add-residence-container">
+    <h2>{{ residence.id ? 'Mettre à jour' : 'Ajouter' }} une Résidence</h2>
+  
+    <form (ngSubmit)="saveResidence()" #residenceForm="ngForm">
+      <div class="form-group">
+        <label for="name">Nom de la Résidence</label>
+        <input
+          id="name"
+          type="text"
+          class="form-control"
+          [(ngModel)]="residence.name"
+          name="name"
+          required
+          #name="ngModel"
+        />
+        <div *ngIf="name.invalid && name.touched" class="error-message">Nom est requis.</div>
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <input
+          id="address"
+          type="text"
+          class="form-control"
+          [(ngModel)]="residence.address"
+          name="address"
+          required
+          #address="ngModel"
+        />
+        <div *ngIf="address.invalid && address.touched" class="error-message">Adresse est requise.</div>
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Statut</label>
+        <select
+          id="status"
+          class="form-control"
+          [(ngModel)]="residence.status"
+          name="status"
+          required
+          #status="ngModel"
+        >
+          <option value="disponible">Disponible</option>
+          <option value="vendu">Vendu</option>
+          <option value="en construction">En construction</option>
+        </select>
+        <div *ngIf="status.invalid && status.touched" class="error-message">Statut est requis.</div>
+      </div>
+  
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input
+          id="image"
+          type="file"
+          class="form-control"
+          (change)="onImageSelect($event)"  
+          accept="image/*" 
+        />
+        <div *ngIf="!imagePath && imageTouched" class="error-message">Image est requise.</div>
+      </div>
+  
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="residenceForm.invalid"
+      >
+        {{ residence.id ? 'Mettre à jour' : 'Ajouter' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Retour</button>
+    </form>
+  </div>
