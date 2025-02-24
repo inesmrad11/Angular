@@ -1,0 +1,185 @@
+{
+  "residences": [
+    {
+      "name": "El Fel",
+      "address": "Borj Cedria",
+      "status": "Disponible",
+      "image": "https://images.adsttc.com/media/images/63a2/9b00/a452/0844/834f/4263/newsletter/residence-kongkaherb-v2in-architects_23.jpg?1671600939",
+      "id": "1"
+    },
+    {
+      "name": "Ines Bent Mrad",
+      "address": "Soussa",
+      "status": "Vendu",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2VMwdlm8WG2rAPC3ey01IbYOdLWTCcXA5wg&s",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "El Arij",
+      "address": "Rades",
+      "image": "../../assets/images/R3.jpg",
+      "status": "Vendu"
+    },
+    {
+      "id": "4",
+      "name": "El Anber",
+      "address": "Inconnu",
+      "image": "../../assets/images/R4.jpg",
+      "status": "En Construction"
+    },
+    {
+      "name": "El Amen",
+      "address": "Ariana",
+      "status": "Disponible",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2VMwdlm8WG2rAPC3ey01IbYOdLWTCcXA5wg&s",
+      "id": "5"
+    },
+    {
+      "id": 6,
+      "name": "WorkHours",
+      "address": "aaa",
+      "image": "https://the7eagles.com/wp-content/uploads/2024/05/Parts-of-Image-URL-1.webp",
+      "status": "En Construction",
+      "apartments": []
+    },
+    {
+      "id": 7,
+      "name": "Ines",
+      "address": "Mrad",
+      "image": "https://storage.googleapis.com/flex-web-media-prod/content/images/wp-content/uploads/2023/12/classical-greek-sculpture.webp",
+      "status": "Disponible",
+      "apartments": []
+    },
+    {
+      "id": 8,
+      "name": "Ines Mrad",
+      "address": "123456",
+      "image": "https://the7eagles.com/wp-content/uploads/2024/05/Parts-of-Image-URL-1.webp",
+      "status": "Disponible",
+      "apartments": []
+    }
+  ],
+  "apartments": [
+    {
+      "apartNum": 101,
+      "floorNum": 1,
+      "surface": 50,
+      "terrace": true,
+      "surfaceterrace": 20,
+      "category": "Luxury",
+      "ResidenceId": 1,
+      "id": "03be"
+    },
+    {
+      "apartNum": 102,
+      "floorNum": 1,
+      "surface": 55,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "Standard",
+      "ResidenceId": 1,
+      "id": "2c68"
+    },
+    {
+      "apartNum": 201,
+      "floorNum": 2,
+      "surface": 75,
+      "terrace": true,
+      "surfaceterrace": 15,
+      "category": "Premium",
+      "ResidenceId": 2,
+      "id": "5bab"
+    },
+    {
+      "apartNum": 202,
+      "floorNum": 2,
+      "surface": 65,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "Standard",
+      "ResidenceId": 2,
+      "id": "e948"
+    },
+    {
+      "apartNum": 301,
+      "floorNum": 3,
+      "surface": 80,
+      "terrace": true,
+      "surfaceterrace": 25,
+      "category": "Luxury",
+      "ResidenceId": 3,
+      "id": "760f"
+    },
+    {
+      "apartNum": 302,
+      "floorNum": 3,
+      "surface": 70,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "Standard",
+      "ResidenceId": 3,
+      "id": "fb5b"
+    },
+    {
+      "apartNum": 401,
+      "floorNum": 4,
+      "surface": 95,
+      "terrace": true,
+      "surfaceterrace": 30,
+      "category": "Penthouse",
+      "ResidenceId": 4,
+      "id": "8063"
+    },
+    {
+      "apartNum": 402,
+      "floorNum": 4,
+      "surface": 85,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "Premium",
+      "ResidenceId": 4,
+      "id": "7add"
+    },
+    {
+      "apartNum": 501,
+      "floorNum": 5,
+      "surface": 60,
+      "terrace": true,
+      "surfaceterrace": 10,
+      "category": "Luxury",
+      "ResidenceId": 5,
+      "id": "5f88"
+    },
+    {
+      "apartNum": 502,
+      "floorNum": 5,
+      "surface": 50,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "Standard",
+      "ResidenceId": 5,
+      "id": "631b"
+    },
+    {
+      "apartNum": 601,
+      "floorNum": 6,
+      "surface": 110,
+      "terrace": true,
+      "surfaceterrace": 35,
+      "category": "Penthouse",
+      "ResidenceId": 6,
+      "id": "202a"
+    },
+    {
+      "apartNum": 602,
+      "floorNum": 6,
+      "surface": 100,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "Premium",
+      "ResidenceId": 6,
+      "id": "aec9"
+    }
+  ]
+}

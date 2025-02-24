@@ -8,11 +8,12 @@
       <p><strong>Adresse:</strong> {{ residence.address }}</p>
       <p><strong>Status:</strong> <span [ngClass]="getStatusClass(residence.status)">{{ residence.status }}</span></p>
       <button (click)="goBack()">Retour</button>
-      <button *ngIf="nextResidence" (click)="goToNextResidence()">Suivant</button> <!-- Next button -->
+      <button *ngIf="nextResidenceId" (click)="goToNextResidence()">Suivant</button>
+
   
       <!-- Add Update and Add buttons -->
-      <button (click)="goToAddResidence()">Ajouter Résidence</button>
-      <button (click)="goToUpdateResidence()">Mettre à jour Résidence</button>
+      <button routerLink="/add-residence">Ajouter Résidence</button> 
+      <button [routerLink]="['/update-residence', residence.id]">Mettre à jour Résidence</button>
       <a [routerLink]="['/apartments-by-residence', residence.id]">Appartements List</a>  <!-- New link -->
 
     </div>
