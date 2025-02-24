@@ -1,0 +1,34 @@
+<!-- apartments-by-residence.component.html -->
+<div class="container">
+    <h2>List of Apartments for Residence ID: {{ residenceId }}</h2>
+  
+    <div *ngIf="apartments.length > 0; else noApartments">
+      <table class="apartment-table">
+        <thead>
+          <tr>
+            <th>Apartment Number</th>
+            <th>Floor Number</th>
+            <th>Surface (m²)</th>
+            <th>Terrace</th>
+            <th>Terrace Surface (m²)</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let apartment of apartments">
+            <td>{{ apartment.apartNum }}</td>
+            <td>{{ apartment.floorNum }}</td>
+            <td>{{ apartment.surface }}</td>
+            <td>{{ apartment.terrace ? 'Yes' : 'No' }}</td>
+            <td>{{ apartment.terrace ? apartment.surfaceterrace : '-' }}</td>
+            <td>{{ apartment.category }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <ng-template #noApartments>
+      <p>No apartments found for this residence.</p>
+    </ng-template>
+  </div>
+  

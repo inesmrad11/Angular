@@ -1,0 +1,26 @@
+<div *ngIf="residence" class="details-container">
+    <div class="image-section">
+      <img [src]="residence.image" [alt]="residence.name">
+    </div>
+  
+    <div class="info-section">
+      <h1>{{ residence.name }}</h1>
+      <p><strong>Adresse:</strong> {{ residence.address }}</p>
+      <p><strong>Status:</strong> <span [ngClass]="getStatusClass(residence.status)">{{ residence.status }}</span></p>
+      <button (click)="goBack()">Retour</button>
+      <button *ngIf="nextResidence" (click)="goToNextResidence()">Suivant</button> <!-- Next button -->
+  
+      <!-- Add Update and Add buttons -->
+      <button (click)="goToAddResidence()">Ajouter Résidence</button>
+      <button (click)="goToUpdateResidence()">Mettre à jour Résidence</button>
+      <a [routerLink]="['/apartments-by-residence', residence.id]">Appartements List</a>  <!-- New link -->
+
+    </div>
+  </div>
+  
+  <!-- If the residence is not found -->
+  <div *ngIf="!residence" class="not-found">
+    <h2>Résidence non trouvée</h2>
+    <button (click)="goBack()">Retour</button>
+  </div>
+  

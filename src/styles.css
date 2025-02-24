@@ -1,0 +1,17 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f8f8;
+  }
+
+  .dm-serif-display {
+    font-family: 'DM Serif Display', serif;
+  }
+  
+  /* Example usage in a specific component */
+  h1, h2, h3 {  /* Or target specific heading levels */
+    font-family: 'DM Serif Display', sans-serif; /* DM Serif Display for headings */
+  }
+  
+  p, span, div { /* Or target other elements as needed */
+    font-family: 'Open Sans', sans-serif; /* Poppins for paragraphs and other text */
+  }

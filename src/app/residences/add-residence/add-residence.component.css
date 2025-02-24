@@ -1,0 +1,123 @@
+🌍 General Container
+.add-residence-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #031937;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
+    text-align: center;
+}
+
+/* 🏠 Form Titles */
+.add-residence-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #004aad;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 📌 Form Groups */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* 🏷 Labels */
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ✏ Input & Select Fields */
+.form-control, .status-dropdown {
+    width: 100%;
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #004aad;
+    border-radius: 4px;
+    background: white;
+    color: #031937;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-control:focus, .status-dropdown:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 3px rgba(0, 170, 255, 0.5);
+}
+
+/* 🖼 File Input */
+input[type="file"] {
+    padding: 3px;
+    font-size: 12px;
+}
+
+/* 🔽 Liste déroulante pour le statut */
+.status-dropdown {
+    background: white;
+}
+
+/* 📌 Apartments Section */
+.apartments-container {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #004aad;
+    border-radius: 6px;
+    background: rgba(3, 25, 55, 0.1);
+}
+
+/* ⚠ Error Messages */
+.error-message {
+    color: #ff4444;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* 🎨 Buttons */
+.btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #004aad;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #022b6d;
+}
+
+.btn-secondary {
+    background-color: #555;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}
+
+/* 🔒 Hidden Field */
+#id {
+    display: none;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .add-residence-container {
+        width: 90%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
