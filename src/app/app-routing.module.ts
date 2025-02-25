@@ -9,16 +9,18 @@ import { AddResidenceComponent } from './residences/add-residence/add-residence.
 import { ApartmentsComponent } from './Apartments/apartments/apartments.component';
 import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-residence/apartments-by-residence.component';
 import { AddApartmentComponent } from './Apartments/add-apartment/add-apartment.component';
+import { UpdateResidenceComponent } from './residences/update-residence/update-residence.component';
 
 const routes: Routes = [
   {path:'',component:ResidencesComponent},
-  {path:'home',component:HomeComponent},
+  {path:'home',component:ResidencesComponent},
   {path:'details/:id',component:ResidenceDetailsComponent},
   {path:'add-residence', component: AddResidenceComponent },
-  {path:'add-residence/:id', component: AddResidenceComponent }, // For updating residence
+  {path:'residences', component: ResidencesComponent },
   {path:'apartments', component: ApartmentsComponent },
   {path:'apartments-by-residence/:residenceId', component: ApartmentsByResidenceComponent },
   {path:'create-apartment', component: AddApartmentComponent },
+  {path: 'update-residence/:id', component: UpdateResidenceComponent },
   {path:'**', component: NotFoundComponent }  // Handle unknown routes
 
 

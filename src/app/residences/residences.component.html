@@ -1,40 +1,39 @@
 <div class="futuristic-container">
-    <!-- Search Bar with Enhanced Functionality -->
-    <div class="search-bar">
-      <input 
-        type="text" 
-        [(ngModel)]="searchAddress" 
-        placeholder="Rechercher par adresse" 
-        (input)="onSearchInput()"
-      >
-      <button class="search-button" (click)="filterResidences()"> Rechercher</button>
-    </div>
-  
-    <!-- Residence Cards -->
-    <div class="residence-grid">
-      <div *ngFor="let residence of filteredResidences" class="residence-card">
-        <h2>{{ residence.name }}</h2>
-        <img [src]="residence.image" alt="{{ residence.name }}" class="residence-image">
-        <div class="button-group">
-          <button class="location-button" (click)="showLocation(residence)">Show Location</button>
-          <button class="like-button" (click)="likeResidence(residence)">❤️</button>
-          <button class="location-button"><a [routerLink]="['/details',residence.id]">Details </a></button>
-        </div>
-        <p [ngClass]="{
-          'available': residence.status === 'Disponible',
-          'construction': residence.status === 'En Construction',
-          'sold': residence.status === 'Vendu'
-        }">
-          {{ residence.status }}
-        </p>
+  <!-- Search Bar with Enhanced Functionality -->
+  <div class="search-bar">
+    <input 
+      type="text" 
+      [(ngModel)]="searchAddress" 
+      placeholder="Rechercher par adresse" 
+      (input)="onSearchInput()"
+    >
+  </div>
 
+  <!-- Residence Cards -->
+  <div class="residence-grid">
+    <div *ngFor="let residence of filteredResidences" class="residence-card">
+      <h2>{{ residence.name }}</h2>
+      <img [src]="residence.image" alt="{{ residence.name }}" class="residence-image">
+      <div class="button-group">
+        <button class="location-button" (click)="showLocation(residence)">Show Location</button>
+        <button class="like-button" (click)="likeResidence(residence)">❤️</button>
+        <button class="location-button"><a [routerLink]="['/details',residence.id]">Details </a></button>
+        <button (click)="deleteResidence(residence.id)" class="like-button"><a> 🗑️</a></button>
       </div>
+      <p [ngClass]="{
+        'available': residence.status === 'Disponible',
+        'construction': residence.status === 'En Construction',
+        'sold': residence.status === 'Vendu'
+      }">
+        {{ residence.status }}
+      </p>
     </div>
   </div>
-  <h2 class="dm-serif-display">Favoris</h2>
-  <ul>
-      <li *ngFor="let fav of favorites">
-        {{ fav.name }} ({{ fav.address }})
-      </li>
-    </ul>
-    
+</div>
+
+<h2 class="dm-serif-display">Favoris</h2>
+<ul>
+  <li *ngFor="let fav of favorites">
+    {{ fav.name }} ({{ fav.address }})
+  </li>
+</ul>

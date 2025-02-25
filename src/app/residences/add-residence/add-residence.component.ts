@@ -1,63 +1,62 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ResidenceService } from '../../core/services/residence.service';
-import { Residence } from '../../core/models/residence';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ResidenceService } from 'src/app/core/services/res.service';
 
 @Component({
   selector: 'app-add-residence',
   templateUrl: './add-residence.component.html',
   styleUrls: ['./add-residence.component.css']
 })
-export class AddResidenceComponent implements OnInit {
-  residence: Residence = { id: 0, name: '', address: '', image: '', status: '' }; // Default empty residence
-  imagePath: string = ''; // To store the image path
-  imageTouched = false;  // To track if the image input was touched
+export class AddResidenceComponent {
+  residenceForm: FormGroup;
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private residenceService: ResidenceService
-  ) {}
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.residence = this.residenceService.getResidenceById(Number(id)) || this.residence;
-    }
+    private fb: FormBuilder,
+    private residenceService: ResidenceService,
+    private router: Router
+  ) {
+    this.residenceForm = this.fb.group({
+      id: [null],
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      address: ['', Validators.required],
+      image: ['', [Validators.required, Validators.pattern('https?://.+')]],
+      status: ['Disponible'],
+      apartments: this.fb.array([]) 
+    });
   }
 
-  // Handle image file selection
-  onImageSelect(event: any): void {
-    this.imageTouched = true; // Mark as touched once an image is selected
-    const file = event.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        // Store only the file path (reader.result is a DataURL)
-        this.imagePath = e.target.result;
-        // Optionally, you can also save just the file name/path here if you're uploading to a server later
-        this.residence.image = this.imagePath;  // Assign to the model
-      };
-      reader.readAsDataURL(file);  // Convert the image file to a Data URL
-    }
+  get apartments(): FormArray {
+    return this.residenceForm.get('apartments') as FormArray;
   }
 
-  // Save or update residence
-  saveResidence() {
-    if (this.residence.id) {
-      // Update existing residence
-      this.residenceService.updateResidence(this.residence);
+  addApartment() {
+    this.apartments.push(this.fb.group({
+      residenceId: ['', Validators.required],
+      apartmentNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      floorNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      terrace: [false],
+      surfaceTerrace: [{ value: '', disabled: true }, Validators.pattern('^[0-9]+$')]
+    }));
+  }
+
+  removeApartment(index: number) {
+    this.apartments.removeAt(index);
+  }
+
+  addResidence(): void {
+    if (this.residenceForm.valid) {
+      this.residenceService.getMaxResidenceId().subscribe((maxId) => {
+        const newResidenceId = maxId + 1; 
+        this.residenceForm.patchValue({ id: newResidenceId }); 
+
+        this.residenceService.addResidence(this.residenceForm.value).subscribe(() => {
+          alert('Résidence ajoutée avec succès !');
+          this.router.navigate(['/residences']);
+        });
+      });
     } else {
-      // Add new residence
-      this.residenceService.addResidence(this.residence);
+      alert('Veuillez remplir tous les champs correctement.');
     }
-
-    this.router.navigate(['/']); // Navigate to home or other appropriate page
-  }
-
-  // Go back to the previous page
-  goBack() {
-    this.router.navigate(['/']);
   }
 }

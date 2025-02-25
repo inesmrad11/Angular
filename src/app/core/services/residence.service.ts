@@ -6,10 +6,10 @@ import { Residence } from '../models/residence';
 })
 export class ResidenceService {
   private residences: Residence[] = [
-    { id: 1, name: "El Fel", address: "Borj Cedria", image: "../../assets/images/fel.jpg", status: "Disponible" },
-    { id: 2, name: "El Yasmine", address: "Ezzahra", image: "../../assets/images/yasmine.jpg", status: "Disponible" },
-    { id: 3, name: "El Arij", address: "Rades", image: "../../assets/images/arij.jpg", status: "Vendu" },
-    { id: 4, name: "El Anber", address: "inconnu", image: "../../assets/images/anber.jpg", status: "En Construction" }
+    // { id: 1, name: "El Fel", address: "Borj Cedria", image: "../../assets/images/fel.jpg", status: "Disponible" },
+    // { id: 2, name: "El Yasmine", address: "Ezzahra", image: "../../assets/images/yasmine.jpg", status: "Disponible" },
+    // { id: 3, name: "El Arij", address: "Rades", image: "../../assets/images/arij.jpg", status: "Vendu" },
+    // { id: 4, name: "El Anber", address: "inconnu", image: "../../assets/images/anber.jpg", status: "En Construction" }
   ];
 
   getResidences(): Residence[] {
