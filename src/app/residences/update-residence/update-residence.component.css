@@ -1,0 +1,112 @@
+/* Conteneur principal centré */
+.edit-residence-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f8f8, #3483ed);
+    padding: 20px;
+}
+
+/* Formulaire de modification de résidence */
+.edit-residence-form {
+    width: 100%;
+    max-width: 600px; /* Réduction de la largeur */
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre */
+h2.text-center {
+    color: #031937;
+    margin-bottom: 15px;
+    font-size: 20px; /* Réduction de la taille */
+}
+
+/* Champs de formulaire */
+.form-label {
+    font-weight: bold;
+    color: #031937;
+    font-size: 14px; /* Réduction de la taille */
+}
+
+.form-control {
+    width: 100%;
+    padding: 6px; /* Réduction de la hauteur */
+    font-size: 12px; /* Réduction de la taille du texte */
+    border: 1px solid #3483ed;
+    border-radius: 4px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #031937;
+    box-shadow: 0 0 3px rgba(3, 25, 55, 0.3);
+    outline: none;
+}
+
+/* Bouton de soumission */
+.btn-primary {
+    background-color: #3483ed;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px; /* Réduction de la hauteur */
+    border-radius: 4px;
+    font-size: 14px; /* Réduction de la taille du texte */
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #031937;
+    transform: scale(1.01);
+}
+
+/* Carte contenant le formulaire */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustement responsive */
+@media (max-width: 768px) {
+    .edit-residence-form {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
+
+
+.container {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}

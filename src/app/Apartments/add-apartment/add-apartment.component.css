@@ -1,0 +1,109 @@
+/* Apartment Form Container */
+.apartment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centre le formulaire verticalement */
+    background: linear-gradient(135deg, #f8f8f8, #3483ed);
+    padding: 20px;
+}
+
+/* Apartment Form */
+.apartment-form {
+    width: 50%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Title */
+.apartment-form h2 {
+    text-align: center;
+    color: #031937;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #031937;
+}
+
+/* Inputs */
+.form-control {
+    width: 100%;
+    padding: 6px; /* Réduit l’espace intérieur */
+    font-size: 12px; /* Réduit la taille du texte */
+    border: 1.5px solid #3483ed; /* Ajuste l'épaisseur de la bordure */
+    border-radius: 4px; /* Diminue légèrement l’arrondi */
+}
+
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacement entre le bouton et le texte */
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #3483ed;
+    color: white;
+    border: 2px solid #3483ed;
+}
+
+.btn-primary:hover {
+    background-color: #031937;
+    border: 2px solid #031937;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: white;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.btn-secondary:hover {
+    background-color: #dc3545;
+    color: white;
+}
+

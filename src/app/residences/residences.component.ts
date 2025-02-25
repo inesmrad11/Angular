@@ -26,8 +26,10 @@ export class ResidencesComponent implements OnInit {
   ngOnInit(): void {
     this.residenceService.getResidences().subscribe((data) => {
       this.listResidences = data;
+      this.filteredResidences = [...data]; // Initialiser la liste filtrée avec toutes les résidences
     });
   }
+  
 
   // Show location details of a residence
   showLocation(residence: Residence) {
@@ -47,8 +49,11 @@ export class ResidencesComponent implements OnInit {
 
   // Filter residences based on address input
   onSearchInput() {
-    this.filteredResidences = this.filterResidences();
+    this.filteredResidences = this.listResidences.filter(residence =>
+      residence.address.toLowerCase().includes(this.searchAddress.toLowerCase())
+    );
   }
+  
 
   // Filtering logic for residences by address
   filterResidences() {

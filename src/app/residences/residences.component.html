@@ -7,12 +7,11 @@
       placeholder="Rechercher par adresse" 
       (input)="onSearchInput()"
     >
-    <button class="search-button" (click)="filterResidences()"> Rechercher</button>
   </div>
 
   <!-- Residence Cards -->
   <div class="residence-grid">
-    <div *ngFor="let residence of listResidences" class="residence-card">
+    <div *ngFor="let residence of filteredResidences" class="residence-card">
       <h2>{{ residence.name }}</h2>
       <img [src]="residence.image" alt="{{ residence.name }}" class="residence-image">
       <div class="button-group">
@@ -28,14 +27,13 @@
       }">
         {{ residence.status }}
       </p>
-
     </div>
   </div>
 </div>
+
 <h2 class="dm-serif-display">Favoris</h2>
 <ul>
-    <li *ngFor="let fav of favorites">
-      {{ fav.name }} ({{ fav.address }})
-    </li>
-  </ul>
-  
+  <li *ngFor="let fav of favorites">
+    {{ fav.name }} ({{ fav.address }})
+  </li>
+</ul>

@@ -4,60 +4,29 @@
       "name": "El Fel",
       "address": "Borj Cedria",
       "status": "Disponible",
-      "image": "https://images.adsttc.com/media/images/63a2/9b00/a452/0844/834f/4263/newsletter/residence-kongkaherb-v2in-architects_23.jpg?1671600939",
+      "image": "../../assets/images/fel.jpg",
       "id": "1"
     },
     {
-      "name": "Ines Bent Mrad",
-      "address": "Soussa",
-      "status": "Vendu",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2VMwdlm8WG2rAPC3ey01IbYOdLWTCcXA5wg&s",
+      "name": "El Yasmine",
+      "address": "Ezzahra",
+      "status": "Disponible",
+      "image": "../../assets/images/yasmine.jpg",
       "id": "2"
     },
     {
-      "id": "3",
       "name": "El Arij",
       "address": "Rades",
-      "image": "../../assets/images/R3.jpg",
-      "status": "Vendu"
+      "status": "Vendu",
+      "image": "../../assets/images/arij.jpg",
+      "id": "3"
     },
     {
-      "id": "4",
       "name": "El Anber",
-      "address": "Inconnu",
-      "image": "../../assets/images/R4.jpg",
-      "status": "En Construction"
-    },
-    {
-      "name": "El Amen",
-      "address": "Ariana",
-      "status": "Disponible",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2VMwdlm8WG2rAPC3ey01IbYOdLWTCcXA5wg&s",
-      "id": "5"
-    },
-    {
-      "id": 6,
-      "name": "WorkHours",
-      "address": "aaa",
-      "image": "https://the7eagles.com/wp-content/uploads/2024/05/Parts-of-Image-URL-1.webp",
+      "address": "inconnu",
       "status": "En Construction",
-      "apartments": []
-    },
-    {
-      "id": 7,
-      "name": "Ines",
-      "address": "Mrad",
-      "image": "https://storage.googleapis.com/flex-web-media-prod/content/images/wp-content/uploads/2023/12/classical-greek-sculpture.webp",
-      "status": "Disponible",
-      "apartments": []
-    },
-    {
-      "id": 8,
-      "name": "Ines Mrad",
-      "address": "123456",
-      "image": "https://the7eagles.com/wp-content/uploads/2024/05/Parts-of-Image-URL-1.webp",
-      "status": "Disponible",
-      "apartments": []
+      "image": "../../assets/images/anber.jpg",
+      "id": "4"
     }
   ],
   "apartments": [

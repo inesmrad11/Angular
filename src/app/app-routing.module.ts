@@ -13,7 +13,7 @@ import { UpdateResidenceComponent } from './residences/update-residence/update-r
 
 const routes: Routes = [
   {path:'',component:ResidencesComponent},
-  {path:'home',component:HomeComponent},
+  {path:'home',component:ResidencesComponent},
   {path:'details/:id',component:ResidenceDetailsComponent},
   {path:'add-residence', component: AddResidenceComponent },
   {path:'residences', component: ResidencesComponent },
